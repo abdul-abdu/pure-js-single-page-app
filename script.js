@@ -6,8 +6,10 @@ function showPage(page) {
     // Change display none to block (current page)
     document.querySelector(`#${page}`).style.display = "block";
 
-
     // Change background current color
+    document.querySelectorAll("a").forEach((a) => {
+        a.style.background = "none";
+    });
     document.querySelector(`.${page}`).style.background = "#1b9bff";
 }
 
